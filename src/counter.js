@@ -3,8 +3,9 @@ import React from 'react';
 class Counter extends React.Component {
     constructor(props) {
         super(props);
+        const counter = JSON.parse(localStorage.getItem("counter")) || 0;
         this.state = { 
-            counter : +localStorage.getItem("counter")
+            counter : counter
          }
     }
 
